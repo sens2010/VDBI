@@ -8,13 +8,4 @@ A data transfer protocol which will change the resource description and data tra
      4.Data type, it defined the type of the data in each attribute, it has the common type in the other programming language, so we could transfer the data to the language we like;  
      5.User defination, the user could use the type of vdbi to state their service and resource. For example, we could use it to description the  data in our database table.  
      For the continue the program, we regist a website(http://www.vdbi.org, some reason, it still under construction) to inform the more detail. Anyone who convey the vdbi protocol could tranfer data themselves, and the proxy and buffer may be a good choice to improve the data service. We realize the almost function of vdbi, and ultilize it transfer data in VDB. Some people may be have trouble in RDF, so we give a compatible version called VDBILite.  
-```flow
-st=>start: 用户登陆
-op=>operation: 登陆操作
-cond=>condition: 登陆成功 Yes or No?
-e=>end: 进入后台
 
-st->op->cond
-cond(yes)->e
-cond(no)->op
-```

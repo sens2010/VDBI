@@ -1,20 +1,158 @@
-# VDBI
-A data transfer protocol which will change the resource description and data transport.   
-     Just like other thing in data transfter, a resource should have themselves description. And the resource should be described by itself. In this area, RDF description maybe an excellent choice, and RDF also defined a lot of schema to describe the resource.     
-     But, the user always wanna to get resouces in code-approaching, so the description should be easy encode an decode. So a data transfer protocol which just like OData and so on, should be used more frequently. On the other hand, those data protocol just defined the data format and operator, And has a little information about the description of the data. So, our group decide to develop a new data transfer protocol. The protocol will base on the RDF description style, and also give a tide expression for user to get. We call it VDBI, for the reason that it maybe first use in VDB(Virtual Database) data transfer. At first, we define it feature as follow:  
-     1.Resource type, include container, file, connector, record and so on. The container can enclude the subresource, and diffrent type may defined diffrent type;  
-     2.Attribute type, it include the type where we could form the characters in our type. For example, we defined name, even type in the attribute.  
-     3.Service type, it just make a enclusion cover for the invoking relation to data. The service type could provide a uniform service call to user;  
-     4.Data type, it defined the type of the data in each attribute, it has the common type in the other programming language, so we could transfer the data to the language we like;  
-     5.User defination, the user could use the type of vdbi to state their service and resource. For example, we could use it to description the  data in our database table.  
-     For the continue the program, we regist a website(http://www.vdbi.org, some reason, it still under construction) to inform the more detail. Anyone who convey the vdbi protocol could tranfer data themselves, and the proxy and buffer may be a good choice to improve the data service. We realize the almost function of vdbi, and ultilize it transfer data in VDB. Some people may be have trouble in RDF, so we give a compatible version called VDBILite.  
-```flow
-st=>start: 用户登陆
-op=>operation: 登陆操作
-cond=>condition: 登陆成功 Yes or No?
-e=>end: 进入后台
+# Markdown Plus
 
-st->op->cond
-cond(yes)->e
-cond(no)->op
+![Markdown Plus](icon.png)
+Markdown Plus ("M+" or "mdp" for short) is a versatile markdown editor. Besides common markdown, GitHub flavored markdown, it also supports task lists, emojis, Font Awesome icons, Ionicons icons, mathematical formulae, flowcharts, sequence diagrams, gantt diagrams, Vim mode and Emacs mode.
+
+
+##### Fork me on GitHub: <i class="fa fa-github" style="font-size: 64px;"/> [tylingsoft/markdown-plus](https://github.com/tylingsoft/markdown-plus).
+
+##### Buy our Mac app: <i class="fa fa-apple" style="font-size: 64px;"/> [tylingsoft.com/mdp](https://tylingsoft.com/mdp)
+
+---
+
+
+## Code blocks with syntax highlight
+
+    <?php
+        echo "Hello world!";
+
+```python
+from fabric.api import local
+
+def update():
+    local('rm -rf bower_components')
+    local('bower cache clean')
+    local('bower update')
 ```
+
+
+## Tables and alignment
+
+Function name | Description
+------------- | -----------
+`help()`      | Display the help window.
+`destroy()`   | **Destroy your computer!**
+
+| Left-Aligned  | Center Aligned  | Right Aligned |
+| :------------ |:---------------:| -----:|
+| col 3 is      | some wordy text | $1600 |
+| col 2 is      | centered        |   $12 |
+
+
+## Task lists
+
+- [ ] a bigger project
+  - [x] first subtask
+  - [x] follow up subtask
+  - [ ] final subtask
+- [ ] a separate task
+
+[Task Lists Syntax](https://help.github.com/articles/writing-on-github/#task-lists)
+
+
+## Emojis
+
+<img src="https://s.tylingsoft.com/emoji-icons/smile.png" width="64"/>
+<img src="https://s.tylingsoft.com/emoji-icons/whale.png" width="64"/>
+<img src="https://s.tylingsoft.com/emoji-icons/santa.png" width="64"/>
+<img src="https://s.tylingsoft.com/emoji-icons/panda_face.png" width="64"/>
+<img src="https://s.tylingsoft.com/emoji-icons/dog.png" width="64"/>
+<img src="https://s.tylingsoft.com/emoji-icons/truck.png" width="64"/>
+
+[Emoji Cheat Sheet](http://www.emoji-cheat-sheet.com/)
+
+
+## Font Awesome icons
+
+<i class="fa fa-cloud" style="font-size: 64px;"/>
+<i class="fa fa-flag" style="font-size: 64px;"/>
+<i class="fa fa-car" style="font-size: 64px;"/>
+<i class="fa fa-truck" style="font-size: 64px;"/>
+<i class="fa fa-heart" style="font-size: 64px;"/>
+<i class="fa fa-dollar" style="font-size: 64px;"/>
+
+[All the Font Awesome icons](http://fontawesome.io/icons/)
+
+
+## Ionicons icons
+
+<i class="icon ion-beer" style="font-size: 88px;"/>
+<i class="icon ion-key" style="font-size: 88px;"/>
+<i class="icon ion-locked" style="font-size: 88px;"/>
+<i class="icon ion-location" style="font-size: 88px;"/>
+<i class="icon ion-plane" style="font-size: 88px;"/>
+<i class="icon ion-ios-eye" style="font-size: 88px;"/>
+
+[All the Ionicons icons](http://ionicons.com/)
+
+
+## Mathematical formulae
+
+Inline math `$E = mc^2$`, another one: `$\dfrac{ \tfrac{1}{2}[1-(\tfrac{1}{2})^n] }{ 1-\tfrac{1}{2} } = s_n$`.
+
+```math
+\oint_C x^3\, dx + 4y^2\, dy
+
+2 = \left(
+ \frac{\left(3-x\right) \times 2}{3-x}
+ \right)
+
+\sum_{m=1}^\infty\sum_{n=1}^\infty\frac{m^2\,n}
+ {3^m\left(m\,3^n+n\,3^m\right)}
+ 
+\phi_n(\kappa) =
+ \frac{1}{4\pi^2\kappa^2} \int_0^\infty
+ \frac{\sin(\kappa R)}{\kappa R}
+ \frac{\partial}{\partial R}
+ \left[R^2\frac{\partial D_n(R)}{\partial R}\right]\,dR
+```
+
+[Mathematical Formulae Syntax](http://meta.wikimedia.org/wiki/Help:Displaying_a_formula)
+
+
+## Flowcharts
+
+```
+graph TD
+    A[Hard edge] -->|Link text| B(Round edge)
+    B --> C{Decision}
+    C -->|One| D[Result one]
+    C -->|Two| E[Result two]
+```
+
+[Flowchart Syntax](http://knsv.github.io/mermaid/flowchart.html)
+
+
+## Sequence diagrams
+
+```
+sequenceDiagram
+    Alice->>Bob: Hello Bob, how are you?
+    alt is sick
+        Bob->>Alice: Not so good :(
+    else is well
+        Bob->>Alice: Feeling fresh like a daisy
+    end
+    opt Extra response
+        Bob->>Alice: Thanks for asking
+    end
+```
+
+[Sequence Diagram Syntax](http://knsv.github.io/mermaid/sequenceDiagram.html)
+
+
+## Gantt diagrams
+
+```
+gantt
+    title A Gantt Diagram
+    dateFormat  YYYY-MM-DD
+    section Section
+    A task           :a1, 2014-01-01, 30d
+    Another task     :after a1, 20d
+    section Another
+    Task in sec      :2014-01-12, 12d
+    anther task      : 24d
+```
+
+[Gantt Diagram Syntax](http://knsv.github.io/mermaid/gantt.html)
